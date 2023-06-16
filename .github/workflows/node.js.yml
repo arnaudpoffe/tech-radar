@@ -26,5 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: 'npm i'
+    - run: 'npm i aoe_technology_radar'
     - run: 'npx aoe_technology_radar-buildRadar'
     - run: 'npx aoe_technology_radar-generateJson'
